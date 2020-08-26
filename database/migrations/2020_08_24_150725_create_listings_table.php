@@ -44,12 +44,5 @@ class CreateListingsTable extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn('listings', 'amentiy_kitchen'))
-        {
-            Schema::table('listings', function(Blueprint $table) {
-                $table->dropColumn('amentiy_kitchen');
-            });
-        }
-        Schema::dropIfExists('listings');
     }
 }
